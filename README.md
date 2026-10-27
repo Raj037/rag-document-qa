@@ -38,15 +38,12 @@ pip install -r requirements.txt
 
 uvicorn main:app --reload --port 8000
 ```
-Backend runs at http://127.0.0.1:8000
-
 ### 2. Frontend (in a second terminal)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open the URL Vite prints (usually http://localhost:5173).
 
 ## Use it
 1. Choose a PDF → **Upload & Index**
