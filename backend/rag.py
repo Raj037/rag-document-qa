@@ -1,14 +1,12 @@
 """
 =============================================================================
- rag.py  -  The RAG engine (the brain of the app)
+ rag.py  -  The RAG engine
 =============================================================================
- This is your complete_rag.py logic, grown up for a real app:
+ This is the complete_rag.py logic:
    - still: chunk -> embed -> store -> retrieve -> prompt -> generate
-   - upgraded: a real vector database (ChromaDB) instead of a Python list
-   - upgraded: reads real PDFs
-   - upgraded: optional real LLM (OpenAI) with a free fallback
-
- Read it top to bottom. Each function matches one RAG step you already know.
+   - a vector database (ChromaDB) instead of a Python list
+   - reads real PDFs
+   - optional real LLM (OpenAI) with a free fallback
 =============================================================================
 """
 
