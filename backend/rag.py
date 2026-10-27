@@ -20,13 +20,11 @@ from pypdf import PdfReader
 # GLOBAL SETUP (runs once when the server starts)
 # -----------------------------------------------------------------------------
 
-# 1) The embedding model - same free local model you already know.
+# 1) The embedding model 
 print("Loading embedding model...")
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# 2) The vector database - ChromaDB. Think of it as our "chunk_vectors" list
-#    from before, but a real database that stores vectors + their text and
-#    does the similarity search for us.
+# 2) The vector database - ChromaDB.
 chroma_client = chromadb.Client()
 collection = chroma_client.get_or_create_collection(name="documents")
 
@@ -101,8 +99,7 @@ def index_document(doc_id, chunks):
 
 # -----------------------------------------------------------------------------
 # STEP 4 + 5 - RETRIEVE the top-k most relevant chunks for a question
-#    ChromaDB does the cosine-similarity search for us (the same math you
-#    wrote by hand, just optimized).
+#    ChromaDB does the cosine-similarity search for us
 # -----------------------------------------------------------------------------
 def retrieve(question, top_k=3):
     question_vector = embedding_model.encode(question).tolist()
