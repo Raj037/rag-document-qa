@@ -3,7 +3,7 @@
 Upload a PDF, ask questions about it in a chat UI, and get answers grounded in
 the document. Built with **Retrieval-Augmented Generation (RAG)**.
 
-## What it demonstrates (resume talking points)
+## What it demonstrates
 
 - **Full-stack**: Python/FastAPI backend + React/Vite frontend
 - **RAG pipeline**: chunking → embeddings → vector search → grounded generation
